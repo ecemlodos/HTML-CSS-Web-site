@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <title>PetVet</title>
+
+<script>
+			function checkmail() {
+			      var email1 = document.getElementById('email1');
+			      var email2 = document.getElementById('email2');
+			 	  
+			 	  if (email1.value != email2.value) {
+			 	 	alert("The two emails must match!!");
+			        return false;
+			  	  } }
+
+                      function checkpsw() {
+			      var password1 = document.getElementById('password1');
+			      var password2 = document.getElementById('password2');
+			 	  
+			 	  if (password1.value != password2.value) {
+			 	 	alert("The two password must match!!");
+			        return false;
+			  	  } }
+
+                     function anyCheck(f){ 
+        var t=0; var c=f['ckbox[]']; 
+        for(var i=0;i<c.length;i++){ c[i].checked?t++:null; } 
+            if(t>=3)
+                alert("You are a really animal lover :)");}
+			
+        </script>
+
+<style>
+    a { text-align: center;
+          color: #8E24AA; 
+          font-size: 15px;
+          font-family: "Lucida Handwriting";}
+     body{ background-color:#F4ECF7}
+     @media (min-width: 1200px) { .container {
+    max-width: 1200px;
+} }
+
+</style>
+  </head>
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index2.html">PetVet</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index2.html">HOMEPAGE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="blog2.html">BLOG</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="services2.html">OUR SERVICES<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="team2.html">OUR TEAM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gallery2.html">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactme2.html">CONTACT ME</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="registration2.html">REGISTER<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+   <form method="get" action="https://www.google.com/search" style="text-align:right" >
+<input type="text" name="q" size="10" value="">
+<input type="submit" value="Search">
+</form>
+  </div>
+</nav>
+
+
+<form method="post" action="thanks.html" style="text-align:center">
+<label id='name'>Name(Middle Name)Surname</label>
+<input type='text' name='name' id='name' pattern="[a-zA-Z]+" placeholder="Only letters" required><br><br>
+
+<label >Password          </label>
+<input type='password' name='password1' id='password1' pattern="[a-zA-Z][0-9]{8-16}" required><br>
+<label >Password Again         </label>
+<input type='password' id='password2' name='password2' pattern="[a-zA-Z][0-9]{8-16}" onchange="return checkpsw()" required><br><br>
+
+<label>Email       <input type='email' id="email1" name='email1' placeholder="abc@xyz.com" required></label><br>
+<label>Email check   <input type='email' id="email2" name='email2' placeholder="abc@xyz.com" onchange="return checkmail()" required></label><br><br>
+
+<label id="date">Date of Birth</label>
+<input type="date" name="date" id="date" min="01-01-1950" max="01-01-2020" required><br><br>
+
+<label id="telephone">Telephone</label>
+  <input type="text" name="telephone" id="telephone" pattern="[0-9]{11}" 
+           placeholder="0(123) 456 78 90" required><br>
+
+<label id="gender"> Gender     </label>
+        <input type="radio" name="woman" value="woman">Woman<br>
+        <input type="radio" name="man" value="man">Man<br>
+        <input type="radio" name="not" value="not">Not both<br>
+
+
+<label id="about"> About Me & My Pet</label>
+<textarea rows="6" cols="40" name="About" > </textarea><br><br>
+
+Upload your photo <input type="file" name="filetoupload"><br><br>
+			
+
+ Please select each of the following that you are interested in. <br>
+		    <input type="checkbox" name="ckbox[]" value="Bird">Bird <br>
+		    <input type="checkbox" name="ckbox[]" value="cat">Cat <br> 
+		    <input type="checkbox" name="ckbox[]" value="dog">Dog <br>
+                    <input type="checkbox" name="ckbox[]" value="fish">Fish<br> 
+                    <input type="checkbox" name="ckbox[]" value="turtle">Turtle<br>  
+                    <input type="checkbox" name="ckbox[]" value="hamster">Hamster <br> 
+                    <input type="checkbox" name="ckbox[]" value="other">Other <br> <br><br>
+
+
+<input type="submit" onclick="anyCheck(this.form)" value="Submit"><br><br>
+
+<input type="submit" onclick="window.location.href='registration.html';" value="Reset"><br><br>
+
+<a href="index.html"><img src="images/home.png" alt="homepage" width="50" height="50"></a><br>
+</form>
+
+
+<footer><p>Ecem Lodos 2020 &copy; Copyright</p></footer>
+
+</body>
+</html>
